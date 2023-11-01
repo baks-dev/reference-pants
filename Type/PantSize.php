@@ -25,7 +25,6 @@ use InvalidArgumentException;
 
 final class PantSize
 {
-
     public const TYPE = 'pants_size_type';
 
     private PantSizeInterface $size;

@@ -32,18 +32,15 @@ use BaksDev\Reference\Pants\Type\PantSize;
 
 final class ReferenceChoicePantSize implements FieldsChoiceInterface, ReferenceChoiceInterface
 {
-
     public function equals($key): bool
     {
         return $key === PantSize::TYPE;
     }
 
-
     public function type(): string
     {
         return PantSize::TYPE;
     }
-
 
     /** Возвращает класс */
     public function class(): string
@@ -51,17 +48,14 @@ final class ReferenceChoicePantSize implements FieldsChoiceInterface, ReferenceC
         return PantSize::class;
     }
 
-
     public function domain(): string
     {
         return 'reference.pant.size';
     }
-
 
     /** Возвращает класс формы для рендера */
     public function form(): string
     {
         return ChoicePantSizeFieldForm::class;
     }
-
 }

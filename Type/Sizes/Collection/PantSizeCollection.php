@@ -29,9 +29,7 @@ use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
 
 final class PantSizeCollection
 {
-
     private iterable $sizes;
-
 
     public function __construct(
         #[TaggedIterator('baks.size.pants', defaultPriorityMethod: 'sort')] iterable $sizes,

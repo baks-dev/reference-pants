@@ -26,12 +26,10 @@ use InvalidArgumentException;
 
 final class PantSizeType extends StringType
 {
-
     public function convertToDatabaseValue($value, AbstractPlatform $platform): mixed
     {
         return (string) $value;
     }
-    
 
     public function convertToPHPValue($value, AbstractPlatform $platform): mixed
     {

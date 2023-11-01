@@ -46,7 +46,6 @@ final class ChoicePantSizeFieldForm extends AbstractType
 		$builder->addModelTransformer($this->transformer);
 	}
 	
-	
 	public function configureOptions(OptionsResolver $resolver) : void
 	{
 		$resolver->setDefaults([

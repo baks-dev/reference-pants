@@ -38,7 +38,6 @@ final class ChoicePantSizeFieldTransformer implements DataTransformerInterface
 		return new PantSize($value);
 	}
 	
-	
 	public function reverseTransform(mixed $value): string
 	{
 		return (string) $value;

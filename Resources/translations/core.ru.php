@@ -21,4 +21,4 @@
  *  THE SOFTWARE.
  */
 
-return [ 'size_clothing_type' => 'Размер брюк' ];
+return [ 'pants_size_type' => 'Размер брюк' ];

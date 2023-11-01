@@ -49,8 +49,7 @@ final class PantSizeExtension extends AbstractExtension
 		}
 	}
 	
-	
-	
+
 	public function render(Environment $twig, string $value): string
 	{
 		try

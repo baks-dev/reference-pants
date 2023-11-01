@@ -42,4 +42,5 @@ interface PantSizeInterface
      * Проверяет, относится ли строка цвета к данному объекту
      */
     public static function equals(string $size): bool;
+
 }

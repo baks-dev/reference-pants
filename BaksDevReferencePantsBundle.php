@@ -37,5 +37,4 @@ class BaksDevReferencePantsBundle extends AbstractBundle
 			}
 		}
 	}
-	
 }

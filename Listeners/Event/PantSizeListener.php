@@ -39,29 +39,23 @@ use Symfony\Component\HttpKernel\Event\ControllerEvent;
 #[AsEventListener(event: ConsoleEvents::COMMAND)]
 final class PantSizeListener
 {
-
     private PantSizeCollection $collection;
-
 
     public function __construct(PantSizeCollection $collection)
     {
         $this->collection = $collection;
     }
-    
 
     public function onKernelController(ControllerEvent $event): void
     {
-        // Инициируем цвета
         if(in_array(PantSizeType::class, get_declared_classes(), true))
         {
             $this->collection->cases();
         }
     }
 
-
     public function onConsoleCommand(ConsoleCommandEvent $event): void
     {
-        // Всегда инициируем цвет в консольной комманде
         $this->collection->cases();
     }
 

@@ -34,7 +34,6 @@ final class PantSize36 implements PantSizeInterface
 
     public const SIZE = '36';
 
-
     /**
      * Возвращает значение (value)
      */

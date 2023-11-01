@@ -2,7 +2,6 @@
 
 return [
 	'placeholder' =>'Choose a size pants ...',
-	'label' =>'Size Clothing',
-
+	'label' =>'Size Pants',
 
 ];
