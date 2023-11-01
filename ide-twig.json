@@ -1,0 +1,8 @@
+{
+  "namespaces": [
+    {
+      "namespace": "reference-pants",
+      "path": "Resources/view"
+    }
+  ]
+}
