@@ -31,8 +31,8 @@ use Symfony\Component\Form\DataTransformerInterface;
 final class ChoicePantSizeFieldTransformer implements DataTransformerInterface
 {
 	
-	public function transform(mixed $value)
-	{
+	public function transform(mixed $value): ?PantSize
+    {
 		if(empty($value)) { return null; }
 		
 		return new PantSize($value);
