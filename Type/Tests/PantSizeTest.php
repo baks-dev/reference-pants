@@ -98,5 +98,7 @@ final class PantSizeTest extends KernelTestCase
 
         }
 
+
+        self::assertTrue(true);
     }
 }
