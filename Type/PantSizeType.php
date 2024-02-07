@@ -22,16 +22,17 @@ namespace BaksDev\Reference\Pants\Type;
 
 use Doctrine\DBAL\Platforms\AbstractPlatform;
 use Doctrine\DBAL\Types\StringType;
+use Doctrine\DBAL\Types\Type;
 use InvalidArgumentException;
 
-final class PantSizeType extends StringType
+final class PantSizeType extends Type
 {
-    public function convertToDatabaseValue($value, AbstractPlatform $platform): mixed
+    public function convertToDatabaseValue($value, AbstractPlatform $platform): string
     {
         return (string) $value;
     }
 
-    public function convertToPHPValue($value, AbstractPlatform $platform): mixed
+    public function convertToPHPValue($value, AbstractPlatform $platform): ?PantSize
     {
         return !empty($value) ? new PantSize($value) : null;
     }
@@ -46,5 +47,10 @@ final class PantSizeType extends StringType
     public function requiresSQLCommentHint(AbstractPlatform $platform): bool
     {
         return true;
+    }
+
+    public function getSQLDeclaration(array $column, AbstractPlatform $platform): string
+    {
+        return $platform->getStringTypeDeclarationSQL($column);
     }
 }
