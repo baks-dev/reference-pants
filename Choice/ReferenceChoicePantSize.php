@@ -58,4 +58,9 @@ final class ReferenceChoicePantSize implements FieldsChoiceInterface, ReferenceC
     {
         return ChoicePantSizeFieldForm::class;
     }
+
+    public function constraints(): ?array
+    {
+        return null;
+    }
 }
