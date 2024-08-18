@@ -25,14 +25,14 @@ declare(strict_types=1);
 
 namespace BaksDev\Reference\Pants\Type\Sizes\Collection;
 
-use Symfony\Component\DependencyInjection\Attribute\TaggedIterator;
+use Symfony\Component\DependencyInjection\Attribute\AutowireIterator;
 
 final class PantSizeCollection
 {
     private iterable $sizes;
 
     public function __construct(
-        #[TaggedIterator('baks.size.pants', defaultPriorityMethod: 'sort')] iterable $sizes,
+        #[AutowireIterator('baks.size.pants', defaultPriorityMethod: 'sort')] iterable $sizes,
     )
     {
         $this->sizes = $sizes;
