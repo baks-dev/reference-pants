@@ -29,14 +29,9 @@ use Symfony\Component\DependencyInjection\Attribute\AutowireIterator;
 
 final class PantSizeCollection
 {
-    private iterable $sizes;
-
     public function __construct(
-        #[AutowireIterator('baks.size.pants', defaultPriorityMethod: 'sort')] iterable $sizes,
-    )
-    {
-        $this->sizes = $sizes;
-    }
+        #[AutowireIterator('baks.size.pants', defaultPriorityMethod: 'sort')] private readonly iterable $sizes,
+    ) {}
 
 
     /** Возвращает массив из значений SizeClothingInterface */
