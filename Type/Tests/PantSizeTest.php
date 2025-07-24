@@ -55,7 +55,9 @@ final class PantSizeTest extends KernelTestCase
             self::assertTrue($PantSize->equals($PantSize)); // объект класса
 
             $PantSizeType = new PantSizeType();
-            $platform = $this->getMockForAbstractClass(AbstractPlatform::class);
+            $platform = $this
+                ->getMockBuilder(AbstractPlatform::class)
+                ->getMock();
 
             $convertToDatabase = $PantSizeType->convertToDatabaseValue($PantSize, $platform);
             self::assertEquals($PantSize->getPantSizeValue(), $convertToDatabase);
