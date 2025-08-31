@@ -30,13 +30,12 @@ use BaksDev\Reference\Pants\Type\PantSizeType;
 use BaksDev\Reference\Pants\Type\Sizes\Collection\PantSizeCollection;
 use BaksDev\Wildberries\Orders\Type\WildberriesStatus\Status\Collection\WildberriesStatusInterface;
 use Doctrine\DBAL\Platforms\AbstractPlatform;
+use PHPUnit\Framework\Attributes\Group;
 use Symfony\Bundle\FrameworkBundle\Test\KernelTestCase;
 use Symfony\Component\DependencyInjection\Attribute\When;
 
-/**
- * @group reference-pants
- */
 #[When(env: 'test')]
+#[Group('reference-pants')]
 final class PantSizeTest extends KernelTestCase
 {
     public function testUseCase(): void
